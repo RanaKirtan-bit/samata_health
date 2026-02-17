@@ -9,12 +9,18 @@ import RegisterPage from './pages/RegisterPage';
 // User Pages
 import UserDashboard from './pages/user/UserDashboard';
 import SearchTherapists from './pages/user/SearchTherapists';
-import TherapistProfile from './pages/user/TherapistProfile';
+import TherapistProfileUser from './pages/user/TherapistProfile';
 import BookAppointment from './pages/user/BookAppointment';
 import UserAppointments from './pages/user/UserAppointments';
 
 // Therapist Pages
 import TherapistDashboard from './pages/therapist/TherapistDashboard';
+import TherapistProfile from './pages/therapist/TherapistProfile';
+import TherapistAvailability from './pages/therapist/TherapistAvailability';
+import TherapistRequests from './pages/therapist/TherapistRequests';
+import TherapistAppointments from './pages/therapist/TherapistAppointments';
+import TherapistEarnings from './pages/therapist/TherapistEarnings';
+import TherapistSettings from './pages/therapist/TherapistSettings';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -33,12 +39,18 @@ function App() {
           {/* ========== USER ROUTES ========== */}
           <Route path="/user/dashboard" element={<UserDashboard />} />
           <Route path="/user/therapists" element={<SearchTherapists />} />
-          <Route path="/user/therapist/:id" element={<TherapistProfile />} />
+          <Route path="/user/therapist/:id" element={<TherapistProfileUser />} />
           <Route path="/user/book/:therapistId" element={<BookAppointment />} />
           <Route path="/user/appointments" element={<UserAppointments />} />
 
-          {/* ========== THERAPIST ROUTES ========== */}
+{/* ========== THERAPIST ROUTES ========== */}
           <Route path="/therapist/dashboard" element={<TherapistDashboard />} />
+          <Route path="/therapist/profile" element={<TherapistProfile />} />
+          <Route path="/therapist/availability" element={<TherapistAvailability />} />
+          <Route path="/therapist/requests" element={<TherapistRequests />} />
+          <Route path="/therapist/appointments" element={<TherapistAppointments />} />
+          <Route path="/therapist/earnings" element={<TherapistEarnings />} />
+          <Route path="/therapist/settings" element={<TherapistSettings />} />
 
           {/* ========== ADMIN ROUTES ========== */}
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
